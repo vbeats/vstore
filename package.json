@@ -1,6 +1,6 @@
 {
   "name": "@vbeats/vstore",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "manage browser storage data",
   "main": "index.ts",
   "scripts": {

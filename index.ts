@@ -47,4 +47,9 @@ export default class VStore {
 
         return expireMilliseconds
     }
+
+    remove(key: string): void {
+        this.store.removeItem(key)
+        this.store.removeItem(`__storejs__${key}__expire__`)
+    }
 }
