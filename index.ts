@@ -33,7 +33,7 @@ export default class VStore {
         return v && typeof v === "string" ? JSON.parse(v) : v;
     }
 
-    // 0:not expire <0: expired
+    // 0:not expire -1: expired  >0 : Residual expiration time
     getExpire(key: string): number {
         const expire = this.store.getItem(`__storejs__${key}__expire__`)
         if (!expire) {
@@ -43,6 +43,7 @@ export default class VStore {
 
         if (expireMilliseconds <= 0) {
             this.store.removeItem(key)
+            return -1
         }
 
         return expireMilliseconds
