@@ -1,3 +1,8 @@
+# vstore
+
+Sponsor [![paypal.me/bootvue](https://cdn.jsdelivr.net/gh/boot-vue/pics@main/icon/paypal.svg)](https://www.paypal.me/bootvue)
+☕☕☕
+
 ## install
 
 ```bash
