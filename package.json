@@ -1,0 +1,24 @@
+{
+  "name": "@vbeats/vstore",
+  "version": "1.0.0",
+  "description": "manage browser storage data",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbeats/vstore.git"
+  },
+  "keywords": [
+    "storage",
+    "localstorage",
+    "sessionstorage"
+  ],
+  "author": "bootvue@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vbeats/vstore/issues"
+  },
+  "homepage": "https://github.com/vbeats/vstore#readme"
+}
