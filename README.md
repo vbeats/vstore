@@ -19,4 +19,6 @@ store.get("test")
 store.getExpire("test2")
 
 store.remove('test2')
+
+store.removeAll()
 ```

@@ -52,4 +52,8 @@ export default class VStore {
         this.store.removeItem(key)
         this.store.removeItem(`__storejs__${key}__expire__`)
     }
+
+    removeAll(): void {
+        this.store.removeAllItems()
+    }
 }
