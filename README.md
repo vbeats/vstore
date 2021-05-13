@@ -22,3 +22,17 @@ store.remove('test2')
 
 store.removeAll()
 ```
+
+## method
+
+`set<T>(key: string, value: T, [expire: number = 0]): void` : expire Millisecond timestamp || 0 not expire
+
+`get<T>(key: string): T` : return value || null
+
+`getExpire(key: string): number` : // 0:not expire -1: expired  >0 : Residual expiration time
+
+`remove(key: string): void` : remove on item
+
+`removeAll(): void` : clear storage all items 
+
+
