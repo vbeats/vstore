@@ -32,7 +32,7 @@ store.removeAll()
 
 `set<T>(key: string, value: T, [expire: number = 0]): void` : expire Millisecond timestamp || 0 not expire
 
-`get<T>(key: string): T` : return value || null
+`get(key: string): any` : return value || null
 
 `getExpire(key: string): number` : // 0:not expire -1: expired  >0 : Residual expiration time
 

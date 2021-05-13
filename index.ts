@@ -1,3 +1,5 @@
+import {parse, stringify} from './util'
+
 export default class VStore {
     store: Storage;
 
@@ -22,15 +24,15 @@ export default class VStore {
      * @param expire Millisecond timestamp || 0: not expire
      */
     set<T>(key: string, value: T, expire: number = 0): void {
-        this.store.setItem(key, typeof value === "string" ? value : JSON.stringify(value));
+        this.store.setItem(key, typeof value === "string" ? value : stringify(value));
         if (expire > 0) {
             this.store.setItem(`__storejs__${key}__expire__`, expire.toString());
         }
     }
 
-    get<T>(key: string): T {
-        const v = this.store.getItem(key) || null;
-        return v && typeof v === "string" ? JSON.parse(v) : v;
+    get(key: string): any {
+        const v = this.store.getItem(key);
+        return parse(v);
     }
 
     // 0:not expire -1: expired  >0 : Residual expiration time
@@ -39,7 +41,7 @@ export default class VStore {
         if (!expire) {
             return 0
         }
-        const expireMilliseconds: number = new Date().getTime() - parseInt(expire)
+        const expireMilliseconds: number = parseInt(expire) - new Date().getTime()
 
         if (expireMilliseconds <= 0) {
             this.store.removeItem(key)
