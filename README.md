@@ -30,14 +30,15 @@ store.removeAll()
 
 ## method
 
-`set<T>(key: string, value: T, [expire: number = 0]): void` : expire Millisecond timestamp || 0 not expire
+```bash
+set<T>(key: string, value: T, [expire: number = 0]): void : expire Millisecond timestamp || 0 not expire
 
-`get(key: string): any` : return value || null
+get(key: string): any : return value || null
 
-`getExpire(key: string): number` : // 0:not expire -1: expired  >0 : Residual expiration time
+getExpire(key: string): number : // 0:not expire -1: expired  >0 : Residual expiration time
 
-`remove(key: string): void` : remove on item
+remove(key: string): void : remove on item
 
-`removeAll(): void` : clear storage all items 
-
+removeAll(): void : clear storage all items 
+```
 
