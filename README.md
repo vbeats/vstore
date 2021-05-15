@@ -14,7 +14,7 @@ npm i @vbeats/vstore
 ```typescript
 import VStore from "vstore";
 
-const store = new VStore("localStorage")
+const store = new VStore("localStorage") // localStorage || sessionStorage
 
 store.set("test", "1234");
 store.set("test2", "5555", new Date().getTime() + 24 * 60 * 60 * 1000)
@@ -36,7 +36,7 @@ store.removeAll()
 
 `getExpire(key: string): number` : // 0:not expire -1: expired  >0 : Residual expiration time
 
-`remove(key: string): void` : remove on item
+`remove(key: string): void` : remove one item
 
 `removeAll(): void` : clear storage all items 
 
